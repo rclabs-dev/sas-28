@@ -10,3 +10,10 @@ Projetar um comutador para atender a esse objetivo é simples e relativamente ba
 Uma segunda solução seria continuar usando chaves rotativas, estas para baixa corrente, porém, apenas para comutar relés e estes sim, suportariam as altas correntes da comutação/uso. Também é uma solução simples, barata e fácil de construir.
 
 A terceira solução que veio a tona, consiste de uma arquitetura de maior complexidade, de custo superior em relação as soluções anteriores e com algumas perfumarias. Apesar de possuir alto custo em relação a sua funcionalidade, essa terceira solução, cujo projeto será esboçado a seguir, teve como principal motivação, o aprendizado no manuseio dos componentes a serem utilizados no projeto. Basicamente, os requisitos do projeto são:
+
+- item Ser 100% ativo (para o termo ativo propriamente, o mais correto seria usar semicondutores na comutação, mas não é o caso aqui);
+- item Utilizar relés para compor a matriz de comutação de amplificadores/caixas e que suportem potências de até 100 WRMS;
+- item Utilizar lógica de controle usando micro controlador (arduino mega);
+Possuir indicadores visuais da operações  e/ou estado, incluindo VU Meter;
+Utilizar chassis, painel, fonte e chaves do Tuner Gradiente Model 9 para acomodar os componentes e controles do comutador.
+
