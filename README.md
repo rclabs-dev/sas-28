@@ -24,7 +24,9 @@ Nesta seção serão apresentadas as principais funcionalidades do SAS-28, sempr
 ![SAS-28 painel](/images/sas28_panel_natural.jpg)
 <center>**Figura 1: Layout do painel do SAS-28 com o uso do painel do Tuner Gradiente Model 9**</center>
 
-<center>fsdfa</center>
+<p align="center">
+  sdfsdf
+</p>
 
 As funcionalidades a seguir estão associadas ao botões/controles e displays presentes no painel do SAS-28, devendo, portanto, relacioná-las. Também não foi seguida nenhuma ordem física dos comandos/displays no painel.
 
