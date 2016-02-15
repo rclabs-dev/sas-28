@@ -26,11 +26,10 @@ Nesta seção serão apresentadas as principais funcionalidades do SAS-28, sempr
 
 As funcionalidades a seguir estão associadas ao botões/controles e displays presentes no painel do SAS-28, devendo, portanto, relacioná-las. Também não foi seguida nenhuma ordem física dos comandos/displays no painel.
 
-a. **Botão “POWER”**
+1. **Botão “POWER”**
 Um pouco óbvio, mas esse botão tem como função desligar/ligar o SAS-28, devendo ser previamente verificado se o equipamento está devidamente chaveado para 110 ou 220 volts em chave especifica presente no painel traseiro.  E uma simples chave do tipo pushbuttom com retenção e será usada a mesma do M9.
 
-b) Controle “SP/AMP SELECTOR”
-
+2. **Controle “SP/AMP SELECTOR”**
 O SAS-28 foi especificado para operar com dois pares de caixas, sendo que cada par poderá ser comutado em uma das oito entradas de amplificadores disponíveis, distintamente.
 
 Esse comando é um controle do tipo “rotary encoder” com “push buttom”, ou seja, ele pode ser girado infinitamente para direita, como para esquerda e ainda, ao ser pressionado, aciona um contato. Ao girar esse controle, é gerado um pulso em seus terminais (um abrir e fechar de chave), assim, há um pino central (ligado a GND ou VCC conforme projeto) e dois outros que receberão o primeiro pulso conforme sentido de rotação.
@@ -49,7 +48,7 @@ No caso do pressionamento na letra “d”, fará com que a comutação seja des
 
 A comutação selecionada para os dois pares de caixas e amplificadores são sempre gravadas em memória não volátil de modo que ao religar o SAS-28, a última configuração em uso seja restabelecida.
 
-c) Botão “LOCK SEL”
+3. **Botão “LOCK SEL”**
 
 Esse botão do tipo on/off tem como objetivo bloquear o comando “SP/AMP SELECTOR”, evitando comutações indesejáveis. Foi só para aproveitar o botão físico do M9.
 
