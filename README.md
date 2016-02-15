@@ -26,7 +26,7 @@ Nesta seção serão apresentadas as principais funcionalidades do SAS-28, sempr
 
 As funcionalidades a seguir estão associadas ao botões/controles e displays presentes no painel do SAS-28, devendo, portanto, relacioná-las. Também não foi seguida nenhuma ordem física dos comandos/displays no painel.
 
-1. ****Botão “POWER”
+1. **Botão “POWER”**
 
 Um pouco óbvio, mas esse botão tem como função desligar/ligar o SAS-28, devendo ser previamente verificado se o equipamento está devidamente chaveado para 110 ou 220 volts em chave especifica presente no painel traseiro.  E uma simples chave do tipo pushbuttom com retenção e será usada a mesma do M9.
 
