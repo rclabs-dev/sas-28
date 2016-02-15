@@ -20,7 +20,7 @@ Utilizar chassis, painel, fonte e chaves do **Tuner Gradiente Model 9** (produto
 ### Funcionalidades do SAS-28
 Nesta seção serão apresentadas as principais funcionalidades do SAS-28, sempre as associando aos comandos do painel de controle (ou vice-versa), o quais serão usados integralmente os já existentes no chassis do tuner supracitado. A figura 1 (clique na imagem para ver a versão em alta resolução) a seguir representa um esboço de layout que reflete o painel físico do tuner gradiente M9, cuja serigrafia e área do dial foram modificadas visando o novo produto e que será base da explanação que se segue. O arquivo “fonte” no formato do Adobe Photoshop (cada item é um layer) e Corel Draw (muito usado como arte para serigrafia) para quem desejar se aventurar no projeto, portanto, refazer a serigrafia aproveitando o painel do M9, poderá baixa-lo AQUI.
 
-![SAS-28 painel](/images/sas28_panel.jpg)
+[SAS-28 painel](/images/sas28_panel_800.jpg)
 ![SAS-28 painel](/images/sas28_panel_natural.jpg)
 <center>**Figura 1: Layout do painel do SAS-28 com o uso do painel do Tuner Gradiente Model 9**</center>
 
