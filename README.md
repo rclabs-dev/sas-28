@@ -28,3 +28,31 @@ Nesta seção serão apresentadas as principais funcionalidades do SAS-28, sempr
 
 As funcionalidades a seguir estão associadas ao botões/controles e displays presentes no painel do SAS-28, devendo, portanto, relacioná-las. Também não foi seguida nenhuma ordem física dos comandos/displays no painel.
 
+1. ****Botão “POWER”
+
+Um pouco óbvio, mas esse botão tem como função desligar/ligar o SAS-28, devendo ser previamente verificado se o equipamento está devidamente chaveado para 110 ou 220 volts em chave especifica presente no painel traseiro.  E uma simples chave do tipo pushbuttom com retenção e será usada a mesma do M9.
+
+b) Controle “SP/AMP SELECTOR”
+
+O SAS-28 foi especificado para operar com dois pares de caixas, sendo que cada par poderá ser comutado em uma das oito entradas de amplificadores disponíveis, distintamente.
+
+Esse comando é um controle do tipo “rotary encoder” com “push buttom”, ou seja, ele pode ser girado infinitamente para direita, como para esquerda e ainda, ao ser pressionado, aciona um contato. Ao girar esse controle, é gerado um pulso em seus terminais (um abrir e fechar de chave), assim, há um pino central (ligado a GND ou VCC conforme projeto) e dois outros que receberão o primeiro pulso conforme sentido de rotação.
+
+No caso do SAS-28, quando girado para esquerda, aparecerá no display de sete segmentos denominado  “SP/AMP SELECTOR” um valor sequencial de 1 a 8 e ainda o carácter “d”, sendo que cada valor de 1 a 8 corresponde a um dos amplificadores ligados ao SAS-28 e com associação direta para o par de caixas “SP 1″, com  exceção  da posição“d” (de Deactivate ou Desativar)  que será explicado ao final desta alínea.
+
+Assim, ao ser girado, o display irá mudando o seu valor sequencialmente de 1 a 9 e “d”, cuja seleção ocorrerá com o pressionamento do push buttom, ou seja, se o push bottom for pressionado quando o display estiver indicando o numeral 5, essa ação chaveia o amplificador que se encontra ligado na entrada 5 ao par de caixas “SP 1″.
+
+A comutação ocorre para ambos os canais do amplificador, esquerdo e direito e se ao selecionar um amplificador que já se encontra comutado para o outro par de caixas, automaticamente a comutação do par adjacente é desfeito e é executado a nova comutação.
+
+Processo análogo ocorre se o comando for  girado para a direita, porém a associação ocorrerá com o par de caixas “SP 2″. Observa-se que independente da última seleção, a comutação sempre ocorrerá para os dois pares de caixas (SP1/SP2) conforme indicam os displays de sete segmentos (“SP/AMP SELECTOR”).
+
+Se o push bottom for pressionado estando os pares de caixas selecionados para um mesmo amplificador, fará com que o par de caixas SP1 fique em paralelo com o par SP2 conectando-as no amplificador selecionado. Como o ambos pares de caixas passam a ter uma ligação do tipo paralelo, deve-se observar a impedância gerada nessa associação de modo que não esteja inferior ao suportado pelo amplificador.
+
+No caso do pressionamento na letra “d”, fará com que a comutação seja desfeita para aquele par de caixas, ou seja, é um modo de desligar o par de caixas.
+
+A comutação selecionada para os dois pares de caixas e amplificadores são sempre gravadas em memória não volátil de modo que ao religar o SAS-28, a última configuração em uso seja restabelecida.
+
+c) Botão “LOCK SEL”
+
+Esse botão do tipo on/off tem como objetivo bloquear o comando “SP/AMP SELECTOR”, evitando comutações indesejáveis. Foi só para aproveitar o botão físico do M9.
+
