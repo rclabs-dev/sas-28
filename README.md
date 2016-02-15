@@ -1,1 +1,2 @@
-# sas-28
+**Active Speakers/Amplifiers Selector (SAS-28)**
+
