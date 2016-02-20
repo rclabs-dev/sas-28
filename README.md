@@ -108,16 +108,17 @@ A tabela abaixo representa o mapeamento dos pinos utilizados no arduino para ate
 
 Pino | Modo | Função
 --- | --- | ---
- | Output |Display SP1, segmentos de “a” a “g” respectivamente.
-| Output |Display SP2, segmentos de “a” a “g” e “.” respectivamente.
-| Input |Pinos 3 e 1 do Rotary Encoder; o pino 2 é ligado no GND.
-| Input |Pino 2 do push buttom do Rotary Encoder; o pino 1 é ligado no GND.
-| Input |Entrada da chave “VU” da função “Display View”.
-| Input |Entrada de um dos contatos da chave da função “Display On/Off”; um segundo contato da chave é usado para desligar a alimentação do backlight dos LCDs.
-| Output |Pinos do LCD SP1 (Left), sinais RS, EN, DB0, DB1, DB2, DB3 respectivamente.
-| Output |Pinos do LCD SP2 (Right), sinais RS, EN, DB0, DB1, DB2, DB3 respectivamente.
-| Output |Controle dos relés do módulo de comutação; os pinos pares acionam os relés dos amplificadores relacionados com SP1 e os impares com SP2 respectivamente.
-| Input |Entradas analógicas as quais receberão o sinal de áudio para u VU Meter.
+2 a 8 | Output |Display SP1, segmentos de “a” a “g” respectivamente.
+9 a 16 | Output |Display SP2, segmentos de “a” a “g” e “.” respectivamente.
+17 e 18 | Input |Pinos 3 e 1 do Rotary Encoder; o pino 2 é ligado no GND.
+19 | Input |Pino 2 do push buttom do Rotary Encoder; o pino 1 é ligado no GND.
+20 | Input |Entrada da chave “VU” da função “Display View”.
+21 | Input |Entrada de um dos contatos da chave da função “Display On/Off”; um segundo contato da chave é usado para desligar a alimentação do backlight dos LCDs.
+22 a 27 | Output |Pinos do LCD SP1 (Left), sinais RS, EN, DB0, DB1, DB2, DB3 respectivamente.
+28 a 33 | Output |Pinos do LCD SP2 (Right), sinais RS, EN, DB0, DB1, DB2, DB3 respectivamente.
+36 a 51| Output |Controle dos relés do módulo de comutação; os pinos pares acionam os relés dos amplificadores relacionados com SP1 e os impares com SP2 respectivamente.
+0 e 1| Input |Entradas analógicas as quais receberão o sinal de áudio para u VU Meter.
+
 O diagrama eletrônico que envolve os displays, Rotary Encoder e arduino podem ser visto no formato PDF AQUI, ou no formato do software Diptrace AQUI. Não foi produzido nenhuma placa de circuito impresso, sendo a montagem feita sobre placas pré furadas, isto é, daquelas parecidas com protoboard.
 
 A listagem 1 a seguir apresenta o código do “firmware” que fará o controle do SAS-28. Como o código está comentado quanto a suas funcionalidades, foi dispensado quaisquer comentários neste texto. Caso queira baixa-lo, clique AQUI.
