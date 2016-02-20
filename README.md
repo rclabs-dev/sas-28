@@ -106,8 +106,10 @@ Duas entradas analógicas são responsáveis pelo VU Meter que recebe tensões q
 
 A tabela abaixo representa o mapeamento dos pinos utilizados no arduino para atender o interfaceamento acima citado.
 
-**Listagem 1: Código do firmware do SAS-28**
-
+Pino | Modo | Função
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
 
 O diagrama eletrônico que envolve os displays, Rotary Encoder e arduino podem ser visto no formato PDF AQUI, ou no formato do software Diptrace AQUI. Não foi produzido nenhuma placa de circuito impresso, sendo a montagem feita sobre placas pré furadas, isto é, daquelas parecidas com protoboard.
 
