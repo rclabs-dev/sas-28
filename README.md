@@ -54,3 +54,61 @@ A comutação selecionada para os dois pares de caixas e amplificadores são sem
 
 Esse botão do tipo on/off tem como objetivo bloquear o comando “SP/AMP SELECTOR”, evitando comutações indesejáveis. Foi só para aproveitar o botão físico do M9.
 
+**d) Controle “DISPLAY VIEW”**
+
+Esse controle é composto de dois botões denominados “SP/AMP SEL” e “VU”. Quando um dos botões é pressionado, automaticamente o outro é liberado.
+
+Foi contemplado no SAS-28 dois displays de 2 linhas e 16 caracteres (fundo preto com caracteres em vermelho), cada um se relacionando com as funções associadas a cada par de caixas.
+
+Cada display possui duas funções, isto é, se pressionado o botão “SP/AMP SEL” será apresentado as informações da atual comutação entre amplificadores e os pares de caixas. O par de caixas “SP 1″ está para display da esquerda e “SP 2″ para o display da direita. Se pressionado o botão “VU”, ambos os display atuarão com um VU Meter, cada um para um par de caixas.
+
+**e) Botão “DISPLAY”**
+
+Esse botão do tipo on/off tem como função ligar/desligar todos os display do SAS-28. Poderá ser útil em audições noturnas em que o brilho das luzes pode incomodar. A exceção fica por conta do display esquerdo que terá o segmento do ponto acesso constantemente, sendo uma forma de informar que equipamento está ligado. Também foi para aproveitar o botão físico do M9.
+
+**f) Controle “VU SENSITIVITY”**
+
+Esse controle é composto de dois botões do tipo low/high denominados “SP PAIR1″ e “SP PAIR2″. Como os displays também terão a função de VU Meter, esse controle permite aumentar ou diminuir em dois níveis sua sensibilidade, onde na posição “LOW” o VU estará menos sensível, enquanto na posição “HIGH” mais sensível, sendo esse último caso adequado para baixos níveis de potência. Não foi pensando em valores de atenuação em dB ou até mesmo potência WRMS/Pico, mas apenas uma facilidade que poderá ser útil.
+
+### A parte eletrônica do SAS-28
+
+Concluído a explanação sucinta das funcionalidades do SAS-28, trataremos agora da parte eletrônica do SAS-28, que inclui o diagrama eletrônico, placas de circuito impresso e os componentes a serem utilizados.
+
+O circuito eletrônico do SAS-28 é composto dos seguintes módulos:
+
+**a) Fonte de alimentação**
+
+O tuner Gradiente Model 9, cujo chassis, painel e outros itens serão usados para acomodar o SAS-28 possui uma fonte com regulador série de 13 VCC. Essa tensão é ideal para a alimentação do módulo de comutação por conta dos relés, cujas bobinas são para 12 VCC, como para o arduino (módulo de controle) que também tem como recomendação ser alimentado entre 7 e 15 volts. Em verdade o arduino funciona com 5 VCC, cujo regulador encontra se na própria placa. Os 5 volts providos pelo arduino serão utilizados também para alimentar os displays.
+
+A fonte do M9 fica na PCI 240 que a mesma placa que acomoda todas as chaves do produto, portanto, será 100% aproveitada, mas claro apenas a fonte e a parte do circuito impresso de ligação das chaves, onde as trilhas serão rompidas do restante dos circuito que compõe essa placa.
+
+**b) Módulo de comutação**
+
+O módulo de comutação é a parte do SAS-28 que recebe as saídas de caixas dos oito amplificadores (AMPxL/AMPxR) e os comuta entre os dois pares de caixas acústicas (SPxL/SPxR). O download do diagrama elétrico/eletrônico deste módulo poderá ser baixado no formato PDF clicando AQUI, ou se preferir no formato do software Diptrace clicando AQUI.
+
+Conforme circuito, o módulo de comutação é composto basicamente por relés, onde foram usados 32 (U1 a U32) cuja bobina é para 12 VCC e contatos com capacidade para suportar até 7 amperes. Nesse caso, a capacidade de corrente dos contatos estar diretamente associado à potência dos amplificadores. Considerou-se que um relé hermético de 7A poderá suportar amplificadores até 100 watts RMS, que é o propósito desse projeto. Na prática suporta até potências maiores, mas a vida útil fica reduzida. Relés que suportem maior corrente podem ser usados, permitindo assim, o uso de amplificadores com potências superiores ao supracitado.
+
+Dos 32 relés utilizados, são usados dois para cada canal de amplificador. Ambos os relés permitem uma via dupla de comutação até os dois pares de caixas, distintamente, sem riscos de mais de um amplificador aplicar sinal no mesmo par de caixas (responsabilidade do módulo de controle). Ainda, os relés são comutados aos pares, ou seja, o comando que comuta o relé do canal esquerdo é o mesmo que comuta do canal direito de um respectivo amplificador. Assim, foram necessários apenas 16 comandos de relés, os quais são provenientes do módulo de controle (arduino mega).
+
+As saídas do módulo de controle (arduino) são de baixa potência, sendo necessário o uso de drivers (R1/Q1 a R16/Q16) e como os relés são energizados em pares, apenas um diodo contra tensão/corrente reversa foi usado visando a proteção dos drivers. Em relação a outras proteções, tal como fusíveis, componentes acopladores contra indutâncias parasitas e mitigadores de faiscamento nos contatos dos relés não foram previstos, porém, possível de serem adicionados.
+
+Para acomodar os componentes deste módulo, uma placa de circuito impresso dupla face foi desenvolvida, onde as conexões dos bornes de amplificadores/caixas instalados no painel traseiro do M9 chegam por fios de bitola de 1,5mm até a placa, cujas conexões usam terminais FASTON. Já os sinais de controle dos relés chegam através de um conector tipo HEADER (J1). Assim, observa-se que todas as conexões com a placa de comutação traz praticidade para o processo de conexão/desconexão, item esse, importante no caso de manutenção.
+
+O layout do circuito impresso lado cobreado e dos componentes no formato PDF e em Diptrace podem ser baixados AQUI.
+
+**c) Módulo de Controle**
+
+O módulo de controle do SAS-28 tem como base um microcontrolador ora provido pela placa Arduino mega (não é propósito deste documento abordar detalhes do arduino, devendo para tal, consultar o site do produto clicando AQUI).
+
+No SAS-28 o arduino é responsável por interfacear o Rotary Encoder, ler o estado dos botões “LOCK SEL”, “DISPLAY VIEW / VU” e “DISPLAY”; controlar  ambos os displays LCD e de sete segmentos; acionar todos os relés envolvidos no processo de comutação do áudio entre amplificadores de 1 à 8 e os dois pares de caixas de som (SP1/SP2) através de suas entradas/saídas digitais.
+
+Duas entradas analógicas são responsáveis pelo VU Meter que recebe tensões que variam de 0 a 5 VCC e que correspondem ao sinal de áudio proveniente do Módulo VU Meter.
+
+A tabela abaixo representa o mapeamento dos pinos utilizados no arduino para atender o interfaceamento acima citado.
+
+**Listagem 1: Código do firmware do SAS-28**
+
+
+O diagrama eletrônico que envolve os displays, Rotary Encoder e arduino podem ser visto no formato PDF AQUI, ou no formato do software Diptrace AQUI. Não foi produzido nenhuma placa de circuito impresso, sendo a montagem feita sobre placas pré furadas, isto é, daquelas parecidas com protoboard.
+
+A listagem 1 a seguir apresenta o código do “firmware” que fará o controle do SAS-28. Como o código está comentado quanto a suas funcionalidades, foi dispensado quaisquer comentários neste texto. Caso queira baixa-lo, clique AQUI.
