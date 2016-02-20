@@ -121,4 +121,16 @@ Pino | Modo | Função
 
 O diagrama eletrônico que envolve os displays, Rotary Encoder e arduino podem ser visto no formato PDF AQUI, ou no formato do software Diptrace AQUI. Não foi produzido nenhuma placa de circuito impresso, sendo a montagem feita sobre placas pré furadas, isto é, daquelas parecidas com protoboard.
 
-A listagem 1 a seguir apresenta o código do “firmware” que fará o controle do SAS-28. Como o código está comentado quanto a suas funcionalidades, foi dispensado quaisquer comentários neste texto. Caso queira baixa-lo, clique AQUI.
+O código do “firmware” que fará o controle do SAS-28 pode ser visto AQUI. Como o código está comentado quanto a suas funcionalidades, foi dispensado quaisquer comentários neste texto.
+
+**d) Módulo VU Meter**
+
+Em projeto. De antemão será usado o circuito relativo aos amplificadores operacionais usados no VU Meter do amplificador A1 da Gradiente.
+
+Esse circuito usando amplificadores operacionais se faz necessário, visto que, as entradas analógicas do arduino estão limitadas ao range de 0 a 5 volts. Assim, de forma geral, esse circuito pegará todo o espectro de áudio, cuja amplitude varia de negativo a positivo e o conformará no range de 0 a 5 volts.
+
+### Aspectos mecânicos da construção
+
+O processo mecânico para montagem do SAS-28 não possui nenhuma dificuldade e como já citado, teve como base o chassis do tuner M9 da Gradiente.
+
+Assim, a melhor forma de apresentar como foi efetuada a construção, é através de fotos. Com esse objetivo, algumas fotos foram tiradas contemplando os componentes/fases da montagem e poderão ser visualizadas [AQUI](https://plus.google.com/photos/110950546068731796438/albums/5849829876987737601?authkey=COLd0uian7-w3wE).
