@@ -70,7 +70,7 @@ Esse botão do tipo on/off tem como função ligar/desligar todos os display do 
 
 Esse controle é composto de dois botões do tipo low/high denominados “SP PAIR1″ e “SP PAIR2″. Como os displays também terão a função de VU Meter, esse controle permite aumentar ou diminuir em dois níveis sua sensibilidade, onde na posição “LOW” o VU estará menos sensível, enquanto na posição “HIGH” mais sensível, sendo esse último caso adequado para baixos níveis de potência. Não foi pensando em valores de atenuação em dB ou até mesmo potência WRMS/Pico, mas apenas uma facilidade que poderá ser útil.
 
-### A parte eletrônica do SAS-28
+### A eletrônica do SAS-28
 
 Concluído a explanação sucinta das funcionalidades do SAS-28, trataremos agora da parte eletrônica do SAS-28, que inclui o diagrama eletrônico, placas de circuito impresso e os componentes a serem utilizados.
 
