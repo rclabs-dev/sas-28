@@ -18,7 +18,7 @@ Possuir indicadores visuais da operações  e/ou estado, incluindo VU Meter;
 Utilizar chassis, painel, fonte e chaves do **Tuner Gradiente Model 9** (produto de fabricação brasileiro da década de 80) para acomodar os componentes e controles do comutador.
 
 ### Funcionalidades do SAS-28
-Nesta seção serão apresentadas as principais funcionalidades do SAS-28, sempre as associando aos comandos do painel de controle (ou vice-versa), o quais serão usados integralmente os já existentes no chassis do tuner supracitado. A figura 1 (clique na imagem para ver a versão em alta resolução) a seguir representa um esboço de layout que reflete o painel físico do tuner gradiente M9, cuja serigrafia e área do dial foram modificadas visando o novo produto e que será base da explanação que se segue. O arquivo “fonte” no formato do Adobe Photoshop (cada item é um layer) e Corel Draw (muito usado como arte para serigrafia) para quem desejar se aventurar no projeto, portanto, refazer a serigrafia aproveitando o painel do M9, poderá baixa-lo AQUI.
+Nesta seção serão apresentadas as principais funcionalidades do SAS-28, sempre as associando aos comandos do painel de controle (ou vice-versa), o quais serão usados integralmente os já existentes no chassis do tuner supracitado. A figura 1 (clique na imagem para ver a versão em alta resolução) a seguir representa um esboço de layout que reflete o painel físico do tuner gradiente M9, cuja serigrafia e área do dial foram modificadas visando o novo produto e que será base da explanação que se segue. O arquivo “fonte” no formato do Adobe Photoshop (cada item é um layer) e Corel Draw (muito usado como arte para serigrafia) para quem desejar se aventurar no projeto, portanto, refazer a serigrafia aproveitando o painel do M9, cujos arquivos se encontram na pasta "files".
 
 ![SAS-28 painel](/images/sas28_panel.jpg)
 ![SAS-28 painel](/images/sas28_panel_natural.jpg)
@@ -84,7 +84,7 @@ A fonte do M9 fica na PCI 240 que a mesma placa que acomoda todas as chaves do p
 
 **b) Módulo de comutação**
 
-O módulo de comutação é a parte do SAS-28 que recebe as saídas de caixas dos oito amplificadores (AMPxL/AMPxR) e os comuta entre os dois pares de caixas acústicas (SPxL/SPxR). O download do diagrama elétrico/eletrônico deste módulo poderá ser baixado no formato PDF clicando AQUI, ou se preferir no formato do software Diptrace clicando AQUI.
+O módulo de comutação é a parte do SAS-28 que recebe as saídas de caixas dos oito amplificadores (AMPxL/AMPxR) e os comuta entre os dois pares de caixas acústicas (SPxL/SPxR). O download do diagrama elétrico/eletrônico deste módulo poderá ser baixado no formato PDF a partir da pasta "files", como também no formato do software Diptrace clicando.
 
 Conforme circuito, o módulo de comutação é composto basicamente por relés, onde foram usados 32 (U1 a U32) cuja bobina é para 12 VCC e contatos com capacidade para suportar até 7 amperes. Nesse caso, a capacidade de corrente dos contatos estar diretamente associado à potência dos amplificadores. Considerou-se que um relé hermético de 7A poderá suportar amplificadores até 100 watts RMS, que é o propósito desse projeto. Na prática suporta até potências maiores, mas a vida útil fica reduzida. Relés que suportem maior corrente podem ser usados, permitindo assim, o uso de amplificadores com potências superiores ao supracitado.
 
@@ -94,11 +94,11 @@ As saídas do módulo de controle (arduino) são de baixa potência, sendo neces
 
 Para acomodar os componentes deste módulo, uma placa de circuito impresso dupla face foi desenvolvida, onde as conexões dos bornes de amplificadores/caixas instalados no painel traseiro do M9 chegam por fios de bitola de 1,5mm até a placa, cujas conexões usam terminais FASTON. Já os sinais de controle dos relés chegam através de um conector tipo HEADER (J1). Assim, observa-se que todas as conexões com a placa de comutação traz praticidade para o processo de conexão/desconexão, item esse, importante no caso de manutenção.
 
-O layout do circuito impresso lado cobreado e dos componentes no formato PDF e em Diptrace podem ser baixados AQUI.
+O layout do circuito impresso lado cobreado e dos componentes no formato PDF e em Diptrace podem ser baixados a partir da pasta "files".
 
 **c) Módulo de Controle**
 
-O módulo de controle do SAS-28 tem como base um microcontrolador ora provido pela placa Arduino mega (não é propósito deste documento abordar detalhes do arduino, devendo para tal, consultar o site do produto clicando AQUI).
+O módulo de controle do SAS-28 tem como base um microcontrolador ora provido pela placa Arduino mega (não é propósito deste documento abordar detalhes do arduino, devendo para tal, consultar o site do produto clicando [AQUI](https://www.arduino.cc/en/Main/ArduinoBoardMega2560)).
 
 No SAS-28 o arduino é responsável por interfacear o Rotary Encoder, ler o estado dos botões “LOCK SEL”, “DISPLAY VIEW / VU” e “DISPLAY”; controlar  ambos os displays LCD e de sete segmentos; acionar todos os relés envolvidos no processo de comutação do áudio entre amplificadores de 1 à 8 e os dois pares de caixas de som (SP1/SP2) através de suas entradas/saídas digitais.
 
