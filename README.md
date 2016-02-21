@@ -119,9 +119,9 @@ Pino | Modo | Função
 36 a 51| Output |Controle dos relés do módulo de comutação; os pinos pares acionam os relés dos amplificadores relacionados com SP1 e os impares com SP2 respectivamente.
 0 e 1| Input |Entradas analógicas as quais receberão o sinal de áudio para u VU Meter.
 
-O diagrama eletrônico que envolve os displays, Rotary Encoder e arduino podem ser visto no formato PDF AQUI, ou no formato do software Diptrace AQUI. Não foi produzido nenhuma placa de circuito impresso, sendo a montagem feita sobre placas pré furadas, isto é, daquelas parecidas com protoboard.
+O diagrama eletrônico que envolve os displays, Rotary Encoder e arduino podem ser visto no formato PDF na pasta "files", como também no formato do software Diptrace. Não foi produzido nenhuma placa de circuito impresso, sendo a montagem feita sobre placas pré furadas, isto é, daquelas parecidas com protoboard.
 
-O código do “firmware” que fará o controle do SAS-28 pode ser visto AQUI. Como o código está comentado quanto a suas funcionalidades, foi dispensado quaisquer comentários neste texto.
+O código do “firmware” que fará o controle do SAS-28 pode ser visto na pasta "files". Como o código está comentado quanto a suas funcionalidades, foi dispensado quaisquer comentários neste texto.
 
 **d) Módulo VU Meter**
 
