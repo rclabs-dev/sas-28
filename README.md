@@ -119,7 +119,7 @@ Pino | Modo | Função
 36 a 51| Output |Controle dos relés do módulo de comutação; os pinos pares acionam os relés dos amplificadores relacionados com SP1 e os impares com SP2 respectivamente.
 78/79| Input |Entradas analógicas A0/A1 as quais receberão o sinal de áudio para O VU Meter lado esquerdo (SP1) respectivamente para os canais direito e esquerdo.
 80/81| Input |Entradas analógicas A2/A3 as quais receberão o sinal de áudio para O VU Meter lado direito (SP2) respectivamente para os canais direito e esquerdo.
-82/83| Input |Entradas analógicas A4/A5 usadas como entrada digital as quais receberão o sinal para comandar a partir as chaves do painel frontal a sensibilidade dos VU Meters, lado esquerdo (SP1) e direito (SP2) respectivamente.
+82/83| Input |Entradas analógicas A4/A5 usadas como entrada digital as quais receberão o sinal para comandar a sensibilidade dos VU Meters a partir as chaves do painel frontal para os lados esquerdo (SP1) e direito (SP2) respectivamente.
 
 O diagrama eletrônico que envolve os displays, Rotary Encoder e arduino podem ser visto no formato PDF na pasta "files", como também no formato do software Diptrace. Não foi produzido nenhuma placa de circuito impresso, sendo a montagem feita sobre placas pré furadas, isto é, daquelas parecidas com protoboard.
 
