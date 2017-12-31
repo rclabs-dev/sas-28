@@ -110,7 +110,7 @@ Pino | Modo | Função
 --- | --- | ---
 2 a 8 | Output |Display SP1, segmentos de “a” a “g” respectivamente.
 9 a 16 | Output |Display SP2, segmentos de “a” a “g” e “.” respectivamente.
-17 e 18 | Input |Pinos 3 e 1 do Rotary Encoder; o pino 2 é ligado no GND.
+17/18 | Input |Pinos 3 e 1 do Rotary Encoder; o pino 2 é ligado no GND.
 19 | Input |Pino 2 do push buttom do Rotary Encoder; o pino 1 é ligado no GND.
 20 | Input |Entrada da chave “VU” da função “Display View”.
 21 | Input |Entrada de um dos contatos da chave da função “Display On/Off”; um segundo contato da chave é usado para desligar a alimentação do backlight dos LCDs.
