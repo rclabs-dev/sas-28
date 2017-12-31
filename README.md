@@ -117,8 +117,8 @@ Pino | Modo | Função
 22 a 27 | Output |Pinos do LCD SP1 (Left), sinais RS, EN, DB0, DB1, DB2, DB3 respectivamente.
 28 a 33 | Output |Pinos do LCD SP2 (Right), sinais RS, EN, DB0, DB1, DB2, DB3 respectivamente.
 36 a 51| Output |Controle dos relés do módulo de comutação; os pinos pares acionam os relés dos amplificadores relacionados com SP1 e os impares com SP2 respectivamente.
-78 (AO) e 79 (A1)| Input |Entradas analógicas as quais receberão o sinal de áudio para O VU Meter lado esquerdo (SP1) respectivamente para os canais direito e esquerdo.
-80 (A2) e 81 (A3)| Input |Entradas analógicas as quais receberão o sinal de áudio para O VU Meter lado direito (SP2) respectivamente para os canais direito e esquerdo.
+78/79| Input |Entradas analógicas A0/A1 as quais receberão o sinal de áudio para O VU Meter lado esquerdo (SP1) respectivamente para os canais direito e esquerdo.
+80/81| Input |Entradas analógicas A2/A3 as quais receberão o sinal de áudio para O VU Meter lado direito (SP2) respectivamente para os canais direito e esquerdo.
 
 O diagrama eletrônico que envolve os displays, Rotary Encoder e arduino podem ser visto no formato PDF na pasta "files", como também no formato do software Diptrace. Não foi produzido nenhuma placa de circuito impresso, sendo a montagem feita sobre placas pré furadas, isto é, daquelas parecidas com protoboard.
 
