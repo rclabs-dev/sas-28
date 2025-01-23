@@ -135,4 +135,4 @@ Esse circuito usando amplificadores operacionais se faz necessário, visto que, 
 
 O processo mecânico para montagem do SAS-28 não possui nenhuma dificuldade e como já citado, teve como base o chassis do tuner M9 da Gradiente.
 
-Assim, a melhor forma de apresentar como foi efetuada a construção, é através de fotos. Com esse objetivo, algumas fotos foram tiradas contemplando os componentes/fases da montagem e poderão ser visualizadas [AQUI](https://drive.rclabs.com.br/index.php/s/W9o52PdM7tsYX3L).
+Assim, a melhor forma de apresentar como foi efetuada a construção, é através de fotos. Com esse objetivo, algumas fotos foram tiradas contemplando os componentes/fases da montagem e poderão ser visualizadas [AQUI](https://goo.gl/photos/ynmnzRmJqVDBRdpQ7).
